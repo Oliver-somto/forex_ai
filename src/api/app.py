@@ -15,3 +15,4 @@ async def get_prices(pair: str, interval: str = '1min', outputsize: int = 30):
         return await get_forex_candles(formatted_symbol, interval, outputsize)
     except ValueError as e:
         raise HTTPException(status_code= 502, detail= str(e))
+    
